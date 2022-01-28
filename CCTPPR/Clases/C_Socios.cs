@@ -1,11 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace CCTPPR.Clases
 {
@@ -55,41 +49,30 @@ namespace CCTPPR.Clases
         #endregion
         public void grabar (byte[] socio, byte[] repre)
         {
-
             MySqlCommand cmd = new MySqlCommand();
             conec.conectar();
             cmd.Connection = conec.con;
             cmd.CommandText = "insert into socios (nombre_soc, ape_pat_soc, ape_mat_soc, ruc_soc, ruc_dni_so, tel_soc, ema_soc, nom_emp_soc, tip_empre_soc, desc_empre,imagen_soc, nom_repre, a_pat_repre, a_mat_repre, tel_repre, imagen_repre) " +
                 "values ('" + nomb + "','" + apat + "','" + amat + "','" + rucS + "', '" + dniJ + "', '" + telE + "', '" + emaS + "', '" + empr + "', '" + tipE + "', '" + desE + "', @imagen_soc , '" + nomR + "', '" + patR + "', '" + matR + "', '" + telR + "', @imagen_repre)";
-
             cmd.Parameters.AddWithValue("imagen_soc", socio);
             cmd.Parameters.AddWithValue("imagen_repre", repre);
-
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-
         }
-
         public void actualizar (byte[] socio, byte[] repre)
         {
-
             MySqlCommand cmd = new MySqlCommand();
             conec.conectar();
             cmd.Connection = conec.con;
-
             cmd.CommandText = "update socios set nombre_soc ='" + nomb + "', ape_pat_soc ='" + apat + "', ape_mat_soc='" + amat + "', ruc_soc='" + rucS + "', ruc_dni_so='" + dniJ + "', tel_soc='" + telE + "', ema_soc='" + emaS + "', nom_emp_soc='" + empr + "', " +
                 "tip_empre_soc='" + tipE + "', desc_empre='" + desE + "', imagen_soc = @imagen_soc, nom_repre='" + nomR + "', a_pat_repre='" + patR + "', a_mat_repre='" + matR + "', tel_repre='" + telR + "', imagen_repre= @imagen_repre where cod_soc = '" + codS + "'";
-
             cmd.Parameters.AddWithValue("imagen_soc", socio);
             cmd.Parameters.AddWithValue("imagen_repre", repre);
-
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-
         }
-
         public void eliminar()
         {
             MySqlCommand cmd = new MySqlCommand();
@@ -99,12 +82,10 @@ namespace CCTPPR.Clases
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-
         }
         public DataTable mostrar()
         {
             MySqlCommand cmd = new MySqlCommand();
-
             conec.conectar();
             cmd.Connection = conec.con;
             cmd.CommandText = "select * from socios";

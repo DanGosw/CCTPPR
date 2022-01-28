@@ -63,9 +63,9 @@ namespace CCTPPR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_pie_chart_report_24px {
+        internal static System.Drawing.Bitmap add_database_64px {
             get {
-                object obj = ResourceManager.GetObject("add_pie_chart_report_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("add_database_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace CCTPPR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CCTPPR {
+        internal static System.Drawing.Bitmap adv {
             get {
-                object obj = ResourceManager.GetObject("CCTPPR", resourceCulture);
+                object obj = ResourceManager.GetObject("adv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace CCTPPR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap delete_document_32px {
+        internal static System.Drawing.Bitmap aporte {
             get {
-                object obj = ResourceManager.GetObject("delete_document_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("aporte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace CCTPPR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_archivo_nuevo_24 {
+        internal static System.Drawing.Bitmap camara {
             get {
-                object obj = ResourceManager.GetObject("icons8-archivo-nuevo-24", resourceCulture);
+                object obj = ResourceManager.GetObject("camara", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,59 @@ namespace CCTPPR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap images {
+        internal static System.Drawing.Bitmap cancel_26px {
             get {
-                object obj = ResourceManager.GetObject("images", resourceCulture);
+                object obj = ResourceManager.GetObject("cancel_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_database_26px {
+            get {
+                object obj = ResourceManager.GetObject("delete_database_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imac_picture_24px {
+            get {
+                object obj = ResourceManager.GetObject("imac_picture_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info_26px {
+            get {
+                object obj = ResourceManager.GetObject("info_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maintenance_64px {
+            get {
+                object obj = ResourceManager.GetObject("maintenance_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_copy_30px {
+            get {
+                object obj = ResourceManager.GetObject("new_copy_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +166,16 @@ namespace CCTPPR.Properties {
         internal static System.Drawing.Bitmap search_64px {
             get {
                 object obj = ResourceManager.GetObject("search_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap socios {
+            get {
+                object obj = ResourceManager.GetObject("socios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,16 +196,6 @@ namespace CCTPPR.Properties {
         internal static System.Drawing.Bitmap user_image {
             get {
                 object obj = ResourceManager.GetObject("user-image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap zoom_selected_all_32px {
-            get {
-                object obj = ResourceManager.GetObject("zoom_selected_all_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

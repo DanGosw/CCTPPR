@@ -42,54 +42,6 @@ namespace CCTPPR
 
         Clases.C_Socios os = new Clases.C_Socios();
 
-        private void btnSoc_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofdSeleccionar = new OpenFileDialog();
-            ofdSeleccionar.Filter = "Imagenes|*.jpg; *.png";
-            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            ofdSeleccionar.Title = "Seleccionar imagen";
-
-            if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
-            {
-                picSoc.Image = Image.FromFile(ofdSeleccionar.FileName);
-            }
-        }
-
-        private void btnrep_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofdSeleccionar = new OpenFileDialog();
-            ofdSeleccionar.Filter = "Imagenes|*.jpg; *.png";
-            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            ofdSeleccionar.Title = "Seleccionar imagen";
-
-            if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
-            { 
-                picRep.Image = Image.FromFile(ofdSeleccionar.FileName);
-            }
-        }
-
-        private void btnagregar_Click(object sender, EventArgs e)
-        {
-            int x = Convert.ToInt32(MessageBox.Show("¿Deseas Grabar el nuevo Registro?", "Grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
-            if (x == 6)
-            {
-                MemoryStream ms = new MemoryStream();
-                picSoc.Image.Save(ms, ImageFormat.Jpeg);
-                byte[] aByte = ms.ToArray();
-
-
-                MemoryStream rep = new MemoryStream();
-                picRep.Image.Save(rep, ImageFormat.Jpeg);
-                byte[] byteRep = rep.ToArray();
-
-
-                llenar();
-                os.grabar(aByte, byteRep);
-                LimpiarTexto();
-                dgvdatos.DataSource = os.mostrar();
-            }
-        }
-
         private void Socios_Load(object sender, EventArgs e)
         {
             dgvdatos.DataSource = os.mostrar();
@@ -173,11 +125,6 @@ namespace CCTPPR
             txtnroR.Text = "";
         }
 
-        private void btnnuevo_Click(object sender, EventArgs e)
-        {
-            LimpiarTexto();
-        }
-
         private void btneliminar_Click(object sender, EventArgs e)
         {
             try
@@ -198,7 +145,101 @@ namespace CCTPPR
             }
         }
 
-        private void btnbuscar_Click(object sender, EventArgs e)
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarTexto();
+        }
+
+        private void btnagregar_Click_1(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(MessageBox.Show("¿Deseas Grabar el nuevo Registro?", "Grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+            if (x == 6)
+            {
+                MemoryStream ms = new MemoryStream();
+                picSoc.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] aByte = ms.ToArray();
+
+
+                MemoryStream rep = new MemoryStream();
+                picRep.Image.Save(rep, ImageFormat.Jpeg);
+                byte[] byteRep = rep.ToArray();
+
+
+                llenar();
+                os.grabar(aByte, byteRep);
+                LimpiarTexto();
+                dgvdatos.DataSource = os.mostrar();
+            }
+        }
+
+        private void btnactualizar_Click_1(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(MessageBox.Show("¿Deseas Actualizar los Registros?", "Actualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+            if (x == 6)
+            {
+                MemoryStream ms = new MemoryStream();
+                picSoc.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] aByte = ms.ToArray();
+
+
+                MemoryStream rep = new MemoryStream();
+                picRep.Image.Save(rep, ImageFormat.Jpeg);
+                byte[] byteRep = rep.ToArray();
+
+                llenar();
+                os.actualizar(aByte, byteRep);
+                LimpiarTexto();
+                dgvdatos.DataSource = os.mostrar();
+            }
+        }
+
+        private void btneliminar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int x = Convert.ToInt32(MessageBox.Show("¿Deseas Eliminar los Registros?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+                if (x == 6)
+                {
+                    llenar();
+                    os.eliminar();
+                    LimpiarTexto();
+                    dgvdatos.DataSource = os.mostrar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al eliminar");
+                MessageBox.Show("Debera eliminar primero el aporte asociado al socio", "Error");
+            }
+        }
+
+        private void BtnSoc_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdSeleccionar = new OpenFileDialog();
+            ofdSeleccionar.Filter = "Imagenes|*.jpg; *.png";
+            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofdSeleccionar.Title = "Seleccionar imagen";
+
+            if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
+            {
+                picSoc.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
+        }
+
+        private void btnRep_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdSeleccionar = new OpenFileDialog();
+            ofdSeleccionar.Filter = "Imagenes|*.jpg; *.png";
+            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofdSeleccionar.Title = "Seleccionar imagen";
+
+            if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
+            {
+                picRep.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
         {
             BuscarSocios bus = new BuscarSocios();
             bus.ShowDialog();
@@ -223,6 +264,11 @@ namespace CCTPPR
 
             picSoc.Image = bus.imaS;
             picRep.Image = bus.imaR;
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -17,16 +17,17 @@ namespace CCTPPR
             InitializeComponent();
         }
 
-        public string cod, mes, año, tip, nro, soc;
+        public string cod, can, mes, año, tip, nro, soc;
 
         private void dgvdatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             cod = dgvdatos.CurrentRow.Cells[0].Value.ToString();
-            año = dgvdatos.CurrentRow.Cells[1].Value.ToString();
-            mes = dgvdatos.CurrentRow.Cells[2].Value.ToString();
-            tip = dgvdatos.CurrentRow.Cells[3].Value.ToString();
-            nro = dgvdatos.CurrentRow.Cells[4].Value.ToString();
-            soc = dgvdatos.CurrentRow.Cells[5].Value.ToString();
+            can = dgvdatos.CurrentRow.Cells[1].Value.ToString();
+            año = dgvdatos.CurrentRow.Cells[2].Value.ToString();
+            mes = dgvdatos.CurrentRow.Cells[3].Value.ToString();
+            tip = dgvdatos.CurrentRow.Cells[4].Value.ToString();
+            nro = dgvdatos.CurrentRow.Cells[5].Value.ToString();
+            soc = dgvdatos.CurrentRow.Cells[6].Value.ToString();
             Close();
         }
 

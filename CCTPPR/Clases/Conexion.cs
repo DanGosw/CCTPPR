@@ -10,7 +10,7 @@ namespace CCTPPR.Clases
         {
             try
             {
-                con = new MySqlConnection("database=cctppr; data source=localhost; user id=root; pwd=dangows");
+                con = new MySqlConnection("database=cctppr; data source=192.168.1.43; user id=DanGosw; pwd=dangosw");
             }
             catch (Exception ex )
             {

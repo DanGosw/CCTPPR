@@ -34,6 +34,7 @@ namespace CCTPPR
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Socios));
             this.txtcodS = new System.Windows.Forms.TextBox();
             this.txtnomS = new System.Windows.Forms.TextBox();
             this.txtpatS = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@ namespace CCTPPR
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnbuscar = new Guna.UI.WinForms.GunaImageButton();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -86,17 +87,18 @@ namespace CCTPPR
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnRep = new Guna.UI.WinForms.GunaButton();
+            this.BtnSoc = new Guna.UI.WinForms.GunaButton();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.picRep = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.picSoc = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.btnrep = new System.Windows.Forms.Button();
-            this.btnSoc = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnactualizar = new System.Windows.Forms.Button();
-            this.btnagregar = new System.Windows.Forms.Button();
-            this.btnnuevo = new System.Windows.Forms.Button();
+            this.btneliminar = new Guna.UI.WinForms.GunaButton();
+            this.btnactualizar = new Guna.UI.WinForms.GunaButton();
+            this.btnagregar = new Guna.UI.WinForms.GunaButton();
+            this.btnnuevo = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdatos)).BeginInit();
@@ -110,7 +112,7 @@ namespace CCTPPR
             this.txtcodS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtcodS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcodS.ForeColor = System.Drawing.Color.White;
-            this.txtcodS.Location = new System.Drawing.Point(228, 30);
+            this.txtcodS.Location = new System.Drawing.Point(182, 39);
             this.txtcodS.Name = "txtcodS";
             this.txtcodS.ReadOnly = true;
             this.txtcodS.Size = new System.Drawing.Size(288, 29);
@@ -122,7 +124,7 @@ namespace CCTPPR
             this.txtnomS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtnomS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnomS.ForeColor = System.Drawing.Color.White;
-            this.txtnomS.Location = new System.Drawing.Point(228, 65);
+            this.txtnomS.Location = new System.Drawing.Point(182, 74);
             this.txtnomS.Name = "txtnomS";
             this.txtnomS.Size = new System.Drawing.Size(349, 29);
             this.txtnomS.TabIndex = 1;
@@ -133,7 +135,7 @@ namespace CCTPPR
             this.txtpatS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtpatS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpatS.ForeColor = System.Drawing.Color.White;
-            this.txtpatS.Location = new System.Drawing.Point(228, 100);
+            this.txtpatS.Location = new System.Drawing.Point(182, 109);
             this.txtpatS.Name = "txtpatS";
             this.txtpatS.Size = new System.Drawing.Size(349, 29);
             this.txtpatS.TabIndex = 2;
@@ -144,7 +146,7 @@ namespace CCTPPR
             this.txtmatS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtmatS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmatS.ForeColor = System.Drawing.Color.White;
-            this.txtmatS.Location = new System.Drawing.Point(228, 135);
+            this.txtmatS.Location = new System.Drawing.Point(182, 144);
             this.txtmatS.Name = "txtmatS";
             this.txtmatS.Size = new System.Drawing.Size(349, 29);
             this.txtmatS.TabIndex = 3;
@@ -155,7 +157,7 @@ namespace CCTPPR
             this.txtrucS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtrucS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrucS.ForeColor = System.Drawing.Color.White;
-            this.txtrucS.Location = new System.Drawing.Point(228, 170);
+            this.txtrucS.Location = new System.Drawing.Point(182, 179);
             this.txtrucS.MaxLength = 11;
             this.txtrucS.Name = "txtrucS";
             this.txtrucS.Size = new System.Drawing.Size(349, 29);
@@ -167,7 +169,7 @@ namespace CCTPPR
             this.txtJdniS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtJdniS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJdniS.ForeColor = System.Drawing.Color.White;
-            this.txtJdniS.Location = new System.Drawing.Point(228, 205);
+            this.txtJdniS.Location = new System.Drawing.Point(182, 214);
             this.txtJdniS.MaxLength = 11;
             this.txtJdniS.Name = "txtJdniS";
             this.txtJdniS.Size = new System.Drawing.Size(349, 29);
@@ -179,7 +181,7 @@ namespace CCTPPR
             this.txtnroS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtnroS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnroS.ForeColor = System.Drawing.Color.White;
-            this.txtnroS.Location = new System.Drawing.Point(228, 240);
+            this.txtnroS.Location = new System.Drawing.Point(182, 249);
             this.txtnroS.MaxLength = 9;
             this.txtnroS.Name = "txtnroS";
             this.txtnroS.Size = new System.Drawing.Size(349, 29);
@@ -191,7 +193,7 @@ namespace CCTPPR
             this.txtemaS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtemaS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemaS.ForeColor = System.Drawing.Color.White;
-            this.txtemaS.Location = new System.Drawing.Point(228, 275);
+            this.txtemaS.Location = new System.Drawing.Point(182, 284);
             this.txtemaS.MaxLength = 45;
             this.txtemaS.Name = "txtemaS";
             this.txtemaS.Size = new System.Drawing.Size(349, 29);
@@ -203,7 +205,7 @@ namespace CCTPPR
             this.txtempS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtempS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtempS.ForeColor = System.Drawing.Color.White;
-            this.txtempS.Location = new System.Drawing.Point(228, 310);
+            this.txtempS.Location = new System.Drawing.Point(182, 319);
             this.txtempS.Name = "txtempS";
             this.txtempS.Size = new System.Drawing.Size(349, 29);
             this.txtempS.TabIndex = 8;
@@ -214,7 +216,7 @@ namespace CCTPPR
             this.txttipEmS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txttipEmS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttipEmS.ForeColor = System.Drawing.Color.White;
-            this.txttipEmS.Location = new System.Drawing.Point(228, 345);
+            this.txttipEmS.Location = new System.Drawing.Point(182, 354);
             this.txttipEmS.MaxLength = 45;
             this.txttipEmS.Name = "txttipEmS";
             this.txttipEmS.Size = new System.Drawing.Size(349, 29);
@@ -226,7 +228,7 @@ namespace CCTPPR
             this.txtmens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.txtmens.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmens.ForeColor = System.Drawing.Color.White;
-            this.txtmens.Location = new System.Drawing.Point(228, 380);
+            this.txtmens.Location = new System.Drawing.Point(182, 389);
             this.txtmens.MaxLength = 99;
             this.txtmens.Multiline = true;
             this.txtmens.Name = "txtmens";
@@ -288,7 +290,7 @@ namespace CCTPPR
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(613, 385);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(615, 172);
+            this.groupBox1.Size = new System.Drawing.Size(633, 172);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Representante del Socio";
@@ -331,7 +333,7 @@ namespace CCTPPR
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnbuscar);
+            this.groupBox2.Controls.Add(this.gunaButton2);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label8);
@@ -356,32 +358,43 @@ namespace CCTPPR
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(48, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(589, 545);
+            this.groupBox2.Size = new System.Drawing.Size(561, 545);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Personales de los Socios";
             // 
-            // btnbuscar
+            // gunaButton2
             // 
-            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnbuscar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnbuscar.Image = global::CCTPPR.Properties.Resources.search_64px;
-            this.btnbuscar.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnbuscar.Location = new System.Drawing.Point(522, 30);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.OnHoverImage = null;
-            this.btnbuscar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnbuscar.Size = new System.Drawing.Size(55, 29);
-            this.btnbuscar.TabIndex = 30;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            this.gunaButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaButton2.AnimationSpeed = 0.03F;
+            this.gunaButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaButton2.Image = global::CCTPPR.Properties.Resources.search_64px;
+            this.gunaButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton2.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton2.Location = new System.Drawing.Point(476, 39);
+            this.gunaButton2.Name = "gunaButton2";
+            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton2.OnHoverImage = null;
+            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton2.Radius = 8;
+            this.gunaButton2.Size = new System.Drawing.Size(55, 29);
+            this.gunaButton2.TabIndex = 30;
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(78, 281);
+            this.label9.Location = new System.Drawing.Point(32, 290);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 20);
             this.label9.TabIndex = 25;
@@ -390,7 +403,7 @@ namespace CCTPPR
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(89, 351);
+            this.label10.Location = new System.Drawing.Point(43, 360);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(133, 20);
             this.label10.TabIndex = 26;
@@ -399,7 +412,7 @@ namespace CCTPPR
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 319);
+            this.label8.Location = new System.Drawing.Point(7, 328);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(169, 20);
             this.label8.TabIndex = 24;
@@ -408,7 +421,7 @@ namespace CCTPPR
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 386);
+            this.label11.Location = new System.Drawing.Point(16, 395);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 20);
             this.label11.TabIndex = 27;
@@ -417,16 +430,16 @@ namespace CCTPPR
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 249);
+            this.label7.Location = new System.Drawing.Point(32, 255);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(215, 20);
+            this.label7.Size = new System.Drawing.Size(141, 20);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Nroº Telefono / Celular Socio:";
+            this.label7.Text = "Nroº Celular Socio:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(88, 214);
+            this.label6.Location = new System.Drawing.Point(42, 223);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 20);
             this.label6.TabIndex = 22;
@@ -435,7 +448,7 @@ namespace CCTPPR
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(139, 179);
+            this.label5.Location = new System.Drawing.Point(93, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 21;
@@ -444,7 +457,7 @@ namespace CCTPPR
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(113, 146);
+            this.label4.Location = new System.Drawing.Point(67, 155);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 20;
@@ -453,7 +466,7 @@ namespace CCTPPR
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(116, 106);
+            this.label3.Location = new System.Drawing.Point(70, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 20);
             this.label3.TabIndex = 19;
@@ -462,7 +475,7 @@ namespace CCTPPR
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 74);
+            this.label2.Location = new System.Drawing.Point(82, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 18;
@@ -471,7 +484,7 @@ namespace CCTPPR
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 39);
+            this.label1.Location = new System.Drawing.Point(86, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 17;
@@ -685,27 +698,83 @@ namespace CCTPPR
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnRep);
+            this.groupBox3.Controls.Add(this.BtnSoc);
             this.groupBox3.Controls.Add(this.gunaVSeparator1);
             this.groupBox3.Controls.Add(this.picRep);
             this.groupBox3.Controls.Add(this.picSoc);
-            this.groupBox3.Controls.Add(this.btnrep);
-            this.groupBox3.Controls.Add(this.btnSoc);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(613, 12);
+            this.groupBox3.Location = new System.Drawing.Point(615, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(637, 367);
+            this.groupBox3.Size = new System.Drawing.Size(631, 367);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Imagenes Referenciales";
+            // 
+            // btnRep
+            // 
+            this.btnRep.Animated = true;
+            this.btnRep.AnimationHoverSpeed = 0.07F;
+            this.btnRep.AnimationSpeed = 0.03F;
+            this.btnRep.BackColor = System.Drawing.Color.Transparent;
+            this.btnRep.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnRep.BorderColor = System.Drawing.Color.Black;
+            this.btnRep.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRep.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRep.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnRep.ForeColor = System.Drawing.Color.White;
+            this.btnRep.Image = global::CCTPPR.Properties.Resources.imac_picture_24px;
+            this.btnRep.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRep.Location = new System.Drawing.Point(457, 320);
+            this.btnRep.Name = "btnRep";
+            this.btnRep.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRep.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRep.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRep.OnHoverImage = null;
+            this.btnRep.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRep.Radius = 8;
+            this.btnRep.Size = new System.Drawing.Size(160, 37);
+            this.btnRep.TabIndex = 31;
+            this.btnRep.Text = "Seleccionar";
+            this.btnRep.TextOffsetX = 8;
+            this.btnRep.Click += new System.EventHandler(this.btnRep_Click);
+            // 
+            // BtnSoc
+            // 
+            this.BtnSoc.Animated = true;
+            this.BtnSoc.AnimationHoverSpeed = 0.07F;
+            this.BtnSoc.AnimationSpeed = 0.03F;
+            this.BtnSoc.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSoc.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.BtnSoc.BorderColor = System.Drawing.Color.Black;
+            this.BtnSoc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BtnSoc.FocusedColor = System.Drawing.Color.Empty;
+            this.BtnSoc.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.BtnSoc.ForeColor = System.Drawing.Color.White;
+            this.BtnSoc.Image = global::CCTPPR.Properties.Resources.imac_picture_24px;
+            this.BtnSoc.ImageSize = new System.Drawing.Size(25, 25);
+            this.BtnSoc.Location = new System.Drawing.Point(143, 319);
+            this.BtnSoc.Name = "BtnSoc";
+            this.BtnSoc.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.BtnSoc.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BtnSoc.OnHoverForeColor = System.Drawing.Color.White;
+            this.BtnSoc.OnHoverImage = null;
+            this.BtnSoc.OnPressedColor = System.Drawing.Color.Black;
+            this.BtnSoc.Radius = 8;
+            this.BtnSoc.Size = new System.Drawing.Size(160, 37);
+            this.BtnSoc.TabIndex = 30;
+            this.BtnSoc.Text = "Seleccionar";
+            this.BtnSoc.TextOffsetX = 8;
+            this.BtnSoc.Click += new System.EventHandler(this.BtnSoc_Click);
             // 
             // gunaVSeparator1
             // 
             this.gunaVSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gunaVSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.gunaVSeparator1.Location = new System.Drawing.Point(321, 16);
+            this.gunaVSeparator1.Location = new System.Drawing.Point(314, 16);
             this.gunaVSeparator1.Name = "gunaVSeparator1";
             this.gunaVSeparator1.Size = new System.Drawing.Size(10, 345);
             this.gunaVSeparator1.TabIndex = 37;
@@ -715,7 +784,7 @@ namespace CCTPPR
             // 
             this.picRep.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.picRep.Image = global::CCTPPR.Properties.Resources.user_image;
-            this.picRep.Location = new System.Drawing.Point(351, 30);
+            this.picRep.Location = new System.Drawing.Point(337, 30);
             this.picRep.Name = "picRep";
             this.picRep.Size = new System.Drawing.Size(280, 280);
             this.picRep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -735,48 +804,10 @@ namespace CCTPPR
             this.picSoc.TabStop = false;
             this.picSoc.UseTransfarantBackground = false;
             // 
-            // btnrep
-            // 
-            this.btnrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(68)))), ((int)(((byte)(100)))));
-            this.btnrep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnrep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnrep.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrep.ForeColor = System.Drawing.Color.White;
-            this.btnrep.Image = global::CCTPPR.Properties.Resources.zoom_selected_all_32px;
-            this.btnrep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrep.Location = new System.Drawing.Point(476, 323);
-            this.btnrep.Margin = new System.Windows.Forms.Padding(0);
-            this.btnrep.Name = "btnrep";
-            this.btnrep.Size = new System.Drawing.Size(155, 38);
-            this.btnrep.TabIndex = 34;
-            this.btnrep.Text = "Seleccionar";
-            this.btnrep.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnrep.UseVisualStyleBackColor = false;
-            this.btnrep.Click += new System.EventHandler(this.btnrep_Click);
-            // 
-            // btnSoc
-            // 
-            this.btnSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(68)))), ((int)(((byte)(100)))));
-            this.btnSoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSoc.ForeColor = System.Drawing.Color.White;
-            this.btnSoc.Image = global::CCTPPR.Properties.Resources.zoom_selected_all_32px;
-            this.btnSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSoc.Location = new System.Drawing.Point(133, 323);
-            this.btnSoc.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSoc.Name = "btnSoc";
-            this.btnSoc.Size = new System.Drawing.Size(170, 38);
-            this.btnSoc.TabIndex = 25;
-            this.btnSoc.Text = "Seleccionar";
-            this.btnSoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSoc.UseVisualStyleBackColor = false;
-            this.btnSoc.Click += new System.EventHandler(this.btnSoc_Click);
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(347, 329);
+            this.label17.Location = new System.Drawing.Point(333, 333);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(116, 20);
             this.label17.TabIndex = 33;
@@ -793,76 +824,142 @@ namespace CCTPPR
             // 
             // btneliminar
             // 
-            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(68)))), ((int)(((byte)(100)))));
-            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Animated = true;
+            this.btneliminar.AnimationHoverSpeed = 0.07F;
+            this.btneliminar.AnimationSpeed = 0.03F;
+            this.btneliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btneliminar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btneliminar.BorderColor = System.Drawing.Color.Black;
+            this.btneliminar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btneliminar.FocusedColor = System.Drawing.Color.Empty;
+            this.btneliminar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Image = global::CCTPPR.Properties.Resources.delete_document_32px;
-            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btneliminar.Location = new System.Drawing.Point(1028, 563);
+            this.btneliminar.Image = global::CCTPPR.Properties.Resources.delete_database_26px;
+            this.btneliminar.ImageSize = new System.Drawing.Size(25, 25);
+            this.btneliminar.Location = new System.Drawing.Point(1062, 563);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btneliminar.Size = new System.Drawing.Size(222, 37);
-            this.btneliminar.TabIndex = 21;
+            this.btneliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btneliminar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btneliminar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btneliminar.OnHoverImage = null;
+            this.btneliminar.OnPressedColor = System.Drawing.Color.Black;
+            this.btneliminar.Radius = 8;
+            this.btneliminar.Size = new System.Drawing.Size(160, 37);
+            this.btneliminar.TabIndex = 29;
             this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = false;
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            this.btneliminar.TextOffsetX = 8;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // btnactualizar
             // 
-            this.btnactualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(68)))), ((int)(((byte)(100)))));
-            this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnactualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Animated = true;
+            this.btnactualizar.AnimationHoverSpeed = 0.07F;
+            this.btnactualizar.AnimationSpeed = 0.03F;
+            this.btnactualizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnactualizar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnactualizar.BorderColor = System.Drawing.Color.Black;
+            this.btnactualizar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnactualizar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnactualizar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnactualizar.ForeColor = System.Drawing.Color.White;
             this.btnactualizar.Image = global::CCTPPR.Properties.Resources.update;
-            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnactualizar.Location = new System.Drawing.Point(771, 563);
+            this.btnactualizar.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnactualizar.Location = new System.Drawing.Point(878, 563);
             this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnactualizar.Size = new System.Drawing.Size(222, 37);
-            this.btnactualizar.TabIndex = 20;
+            this.btnactualizar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnactualizar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnactualizar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnactualizar.OnHoverImage = null;
+            this.btnactualizar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnactualizar.Radius = 8;
+            this.btnactualizar.Size = new System.Drawing.Size(160, 37);
+            this.btnactualizar.TabIndex = 28;
             this.btnactualizar.Text = "Actualizar";
-            this.btnactualizar.UseVisualStyleBackColor = false;
-            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            this.btnactualizar.TextOffsetX = 8;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click_1);
             // 
             // btnagregar
             // 
-            this.btnagregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(68)))), ((int)(((byte)(100)))));
-            this.btnagregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Animated = true;
+            this.btnagregar.AnimationHoverSpeed = 0.07F;
+            this.btnagregar.AnimationSpeed = 0.03F;
+            this.btnagregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnagregar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnagregar.BorderColor = System.Drawing.Color.Black;
+            this.btnagregar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnagregar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnagregar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Image = global::CCTPPR.Properties.Resources.add_pie_chart_report_24px;
-            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnagregar.Location = new System.Drawing.Point(503, 563);
+            this.btnagregar.Image = global::CCTPPR.Properties.Resources.add_database_64px;
+            this.btnagregar.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnagregar.Location = new System.Drawing.Point(694, 563);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnagregar.Size = new System.Drawing.Size(222, 37);
-            this.btnagregar.TabIndex = 19;
+            this.btnagregar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnagregar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnagregar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnagregar.OnHoverImage = null;
+            this.btnagregar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnagregar.Radius = 8;
+            this.btnagregar.Size = new System.Drawing.Size(160, 37);
+            this.btnagregar.TabIndex = 27;
             this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = false;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            this.btnagregar.TextOffsetX = 8;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click_1);
             // 
             // btnnuevo
             // 
-            this.btnnuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(68)))), ((int)(((byte)(100)))));
-            this.btnnuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnuevo.Animated = true;
+            this.btnnuevo.AnimationHoverSpeed = 0.07F;
+            this.btnnuevo.AnimationSpeed = 0.03F;
+            this.btnnuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnnuevo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnnuevo.BorderColor = System.Drawing.Color.Black;
+            this.btnnuevo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnnuevo.FocusedColor = System.Drawing.Color.Empty;
+            this.btnnuevo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnnuevo.ForeColor = System.Drawing.Color.White;
-            this.btnnuevo.Image = global::CCTPPR.Properties.Resources.icons8_archivo_nuevo_24;
-            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnuevo.Location = new System.Drawing.Point(12, 563);
+            this.btnnuevo.Image = global::CCTPPR.Properties.Resources.new_copy_30px;
+            this.btnnuevo.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnnuevo.Location = new System.Drawing.Point(25, 563);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnnuevo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnnuevo.Size = new System.Drawing.Size(222, 37);
-            this.btnnuevo.TabIndex = 18;
+            this.btnnuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnnuevo.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnnuevo.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnnuevo.OnHoverImage = null;
+            this.btnnuevo.OnPressedColor = System.Drawing.Color.Black;
+            this.btnnuevo.Radius = 8;
+            this.btnnuevo.Size = new System.Drawing.Size(160, 37);
+            this.btnnuevo.TabIndex = 26;
             this.btnnuevo.Text = "Nuevo";
-            this.btnnuevo.UseVisualStyleBackColor = false;
+            this.btnnuevo.TextOffsetX = 8;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
+            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Image = global::CCTPPR.Properties.Resources.cancel_26px;
+            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton1.Location = new System.Drawing.Point(12, 12);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 8;
+            this.gunaButton1.Size = new System.Drawing.Size(30, 33);
+            this.gunaButton1.TabIndex = 25;
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // Socios
             // 
@@ -870,16 +967,18 @@ namespace CCTPPR
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1258, 934);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.btnnuevo);
+            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvdatos);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 900);
             this.Name = "Socios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -933,19 +1032,12 @@ namespace CCTPPR
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnnuevo;
-        private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Button btnactualizar;
-        private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnrep;
-        private System.Windows.Forms.Button btnSoc;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private Guna.UI.WinForms.GunaCirclePictureBox picRep;
         private Guna.UI.WinForms.GunaCirclePictureBox picSoc;
         private System.Windows.Forms.DataGridView dgvdatos;
-        private Guna.UI.WinForms.GunaImageButton btnbuscar;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -964,6 +1056,14 @@ namespace CCTPPR
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnnuevo;
+        private Guna.UI.WinForms.GunaButton btnagregar;
+        private Guna.UI.WinForms.GunaButton btnactualizar;
+        private Guna.UI.WinForms.GunaButton btneliminar;
+        private Guna.UI.WinForms.GunaButton BtnSoc;
+        private Guna.UI.WinForms.GunaButton btnRep;
+        private Guna.UI.WinForms.GunaButton gunaButton2;
     }
 }
 

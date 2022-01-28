@@ -47,9 +47,11 @@ namespace CCTPPR.Formularios
                 {
                     entrada.Text = "Ajustes completamos satisfactoriamente...";
                     timer1.Stop();
-                    Menu men = new Menu();
-                    this.Hide();
-                    men.ShowDialog();
+                    Menu_Final men = new Menu_Final();
+
+                    men.Show();
+
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -68,5 +70,6 @@ namespace CCTPPR.Formularios
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
     }
 }

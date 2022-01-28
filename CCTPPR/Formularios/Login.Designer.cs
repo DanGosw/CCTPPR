@@ -40,12 +40,12 @@ namespace CCTPPR.Formularios
             this.lblfec = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.lblhor = new System.Windows.Forms.Label();
-            this.pbxd = new System.Windows.Forms.PictureBox();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.logear = new Guna.UI.WinForms.GunaGradientButton();
             this.btncerrar = new Guna.UI.WinForms.GunaImageButton();
             this.chkver = new Guna.UI.WinForms.GunaImageCheckBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtpass
@@ -60,13 +60,13 @@ namespace CCTPPR.Formularios
             this.txtpass.FocusedForeColor = System.Drawing.SystemColors.ButtonFace;
             this.txtpass.Font = new System.Drawing.Font("Maiandra GD", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtpass.Location = new System.Drawing.Point(315, 192);
+            this.txtpass.Location = new System.Drawing.Point(331, 192);
             this.txtpass.MaxLength = 45;
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '\0';
             this.txtpass.Radius = 15;
             this.txtpass.Size = new System.Drawing.Size(285, 35);
-            this.txtpass.TabIndex = 20;
+            this.txtpass.TabIndex = 2;
             this.txtpass.TextOffsetX = 15;
             // 
             // txtusu
@@ -81,13 +81,13 @@ namespace CCTPPR.Formularios
             this.txtusu.FocusedForeColor = System.Drawing.SystemColors.ButtonFace;
             this.txtusu.Font = new System.Drawing.Font("Maiandra GD", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtusu.Location = new System.Drawing.Point(314, 123);
+            this.txtusu.Location = new System.Drawing.Point(331, 123);
             this.txtusu.MaxLength = 45;
             this.txtusu.Name = "txtusu";
             this.txtusu.PasswordChar = '\0';
             this.txtusu.Radius = 15;
             this.txtusu.Size = new System.Drawing.Size(285, 35);
-            this.txtusu.TabIndex = 19;
+            this.txtusu.TabIndex = 1;
             this.txtusu.TextOffsetX = 15;
             // 
             // gunaLabel3
@@ -129,11 +129,11 @@ namespace CCTPPR.Formularios
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.pbxd);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            this.panel1.Controls.Add(this.gunaCirclePictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 320);
+            this.panel1.Size = new System.Drawing.Size(280, 320);
             this.panel1.TabIndex = 21;
             // 
             // lblfec
@@ -143,9 +143,9 @@ namespace CCTPPR.Formularios
             this.lblfec.ForeColor = System.Drawing.Color.White;
             this.lblfec.Location = new System.Drawing.Point(290, 69);
             this.lblfec.Name = "lblfec";
-            this.lblfec.Size = new System.Drawing.Size(89, 17);
+            this.lblfec.Size = new System.Drawing.Size(95, 17);
             this.lblfec.TabIndex = 22;
-            this.lblfec.Text = "la hora es xd";
+            this.lblfec.Text = "la fecha es xd";
             this.lblfec.Visible = false;
             // 
             // gunaElipse1
@@ -165,43 +165,49 @@ namespace CCTPPR.Formularios
             this.lblhor.Text = "la hora es xd";
             this.lblhor.Visible = false;
             // 
-            // pbxd
+            // gunaCirclePictureBox1
             // 
-            this.pbxd.Location = new System.Drawing.Point(32, 45);
-            this.pbxd.Name = "pbxd";
-            this.pbxd.Size = new System.Drawing.Size(207, 220);
-            this.pbxd.TabIndex = 22;
-            this.pbxd.TabStop = false;
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.Image = global::CCTPPR.Properties.Resources.camara;
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(26, 38);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(230, 230);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox1.TabIndex = 24;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.Tag = "";
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
-            // gunaGradientButton1
+            // logear
             // 
-            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.MediumPurple;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.DarkSlateBlue;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Californian FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(383, 238);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.MediumPurple;
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.DarkTurquoise;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Radius = 15;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(185, 35);
-            this.gunaGradientButton1.TabIndex = 15;
-            this.gunaGradientButton1.Text = "Iniciar Sesión";
-            this.gunaGradientButton1.TextOffsetX = 10;
-            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
+            this.logear.Animated = true;
+            this.logear.AnimationHoverSpeed = 0.07F;
+            this.logear.AnimationSpeed = 0.03F;
+            this.logear.BackColor = System.Drawing.Color.Transparent;
+            this.logear.BaseColor1 = System.Drawing.Color.MediumPurple;
+            this.logear.BaseColor2 = System.Drawing.Color.DarkSlateBlue;
+            this.logear.BorderColor = System.Drawing.Color.Black;
+            this.logear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logear.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.logear.FocusedColor = System.Drawing.Color.Empty;
+            this.logear.Font = new System.Drawing.Font("Californian FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logear.ForeColor = System.Drawing.Color.White;
+            this.logear.Image = ((System.Drawing.Image)(resources.GetObject("logear.Image")));
+            this.logear.ImageSize = new System.Drawing.Size(20, 20);
+            this.logear.Location = new System.Drawing.Point(383, 233);
+            this.logear.Name = "logear";
+            this.logear.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.logear.OnHoverBaseColor2 = System.Drawing.Color.MediumPurple;
+            this.logear.OnHoverBorderColor = System.Drawing.Color.DarkTurquoise;
+            this.logear.OnHoverForeColor = System.Drawing.Color.Black;
+            this.logear.OnHoverImage = null;
+            this.logear.OnPressedColor = System.Drawing.Color.Black;
+            this.logear.Radius = 15;
+            this.logear.Size = new System.Drawing.Size(185, 35);
+            this.logear.TabIndex = 3;
+            this.logear.Text = "Iniciar Sesión";
+            this.logear.TextOffsetX = 10;
+            this.logear.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // btncerrar
             // 
@@ -226,7 +232,7 @@ namespace CCTPPR.Formularios
             this.chkver.ImageCheckedOff = ((System.Drawing.Image)(resources.GetObject("chkver.ImageCheckedOff")));
             this.chkver.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("chkver.ImageCheckedOn")));
             this.chkver.ImageSize = new System.Drawing.Size(25, 25);
-            this.chkver.Location = new System.Drawing.Point(606, 192);
+            this.chkver.Location = new System.Drawing.Point(622, 192);
             this.chkver.Name = "chkver";
             this.chkver.Size = new System.Drawing.Size(35, 35);
             this.chkver.TabIndex = 13;
@@ -236,7 +242,7 @@ namespace CCTPPR.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(680, 320);
             this.Controls.Add(this.lblhor);
             this.Controls.Add(this.lblfec);
@@ -246,17 +252,19 @@ namespace CCTPPR.Formularios
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
-            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.logear);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.chkver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,13 +277,13 @@ namespace CCTPPR.Formularios
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private Guna.UI.WinForms.GunaGradientButton logear;
         private Guna.UI.WinForms.GunaImageButton btncerrar;
         private Guna.UI.WinForms.GunaImageCheckBox chkver;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbxd;
         private System.Windows.Forms.Label lblfec;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private System.Windows.Forms.Label lblhor;
+        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
     }
 }

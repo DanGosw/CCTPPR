@@ -17,24 +17,23 @@ namespace CCTPPR
             InitializeComponent();
         }
 
-        Clases.C_Aportaciones a = new Clases.C_Aportaciones(); 
+        string mon = "S/. ";
 
-        private void btnnuevo_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
+        Clases.C_Aportaciones a = new Clases.C_Aportaciones(); 
 
         private void DatosLlenar()
         {
             a.Cod = txtcodA.Text;
-            a.Mes = cbomesA.Text;
+            a.Can = mon + txtcanA.Text ;
             a.Año = cboañoA.Text;
+            a.Mes = cbomesA.Text;
             a.Tip = cbotipD.Text;
             a.Nro = txtnroD.Text;
         }
         private void limpiar()
         {
             txtcodA.Text = null;
+            txtcanA.Text = null;
             txtdaS.Text = null;
             txtnroD.Text = null;
             txtsoc.Text = null;
@@ -51,13 +50,12 @@ namespace CCTPPR
             dgvdatos.DataSource = a.mostrar();
         }
 
-        private void btnagregar_Click(object sender, EventArgs e)
-        {
-            Verifica_Agregar();
-        }
-
         private void Verifica_Agregar()
         {
+            if (string.IsNullOrEmpty(txtcanA.Text))
+            {
+                MessageBox.Show("Por favor escriba un monto de Aporte Valido", "Error D:");
+            }
             if (string.IsNullOrEmpty(txtnroD.Text))
             {
                 MessageBox.Show("El campo de Nro. de Documento no debe estar vacio", "Error D:");
@@ -94,6 +92,10 @@ namespace CCTPPR
 
         private void Verifica_Actualizar()
         {
+            if (string.IsNullOrEmpty(txtcanA.Text))
+            {
+                MessageBox.Show("Por favor escriba un monto de Aporte Valido", "Error D:");
+            }
             if (string.IsNullOrEmpty(txtnroD.Text))
             {
                 MessageBox.Show("El campo de Nro. de Documento no debe estar vacio", "Error D:");
@@ -137,7 +139,7 @@ namespace CCTPPR
 
             else
             {
-                int x = Convert.ToInt32(MessageBox.Show("¿Deseas Modificar el Registro seleccionado?", "Modificar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+                int x = Convert.ToInt32(MessageBox.Show("¿Deseas eliminar el Registro seleccionado?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
                 if (x == 6)
                 {
                     DatosLlenar();
@@ -148,31 +150,24 @@ namespace CCTPPR
             }
         }
 
-        private void btnactualizar_Click(object sender, EventArgs e)
+        private void dgvdatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Verifica_Actualizar();
+            txtcodA.Text = dgvdatos.CurrentRow.Cells[0].Value.ToString();
+            txtcanA.Text = dgvdatos.CurrentRow.Cells[1].Value.ToString();
+            cboañoA.Text = dgvdatos.CurrentRow.Cells[2].Value.ToString();
+            cbomesA.Text = dgvdatos.CurrentRow.Cells[3].Value.ToString();
+            cbotipD.Text = dgvdatos.CurrentRow.Cells[4].Value.ToString();
+            txtnroD.Text = dgvdatos.CurrentRow.Cells[5].Value.ToString();
+            txtsoc.Text = dgvdatos.CurrentRow.Cells[6].Value.ToString();
         }
 
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            Verifica_Eliminar();
-        }
-
-        private void gunaImageButton1_Click(object sender, EventArgs e)
-        {
-            BuscarSocios bus = new BuscarSocios();
-            bus.ShowDialog();
-
-            txtsoc.Text = bus.codS;
-            txtdaS.Text = bus.nomS + " " + bus.patS + " " + bus.matS ;
-        }
-
-        private void btnbuscar_Click(object sender, EventArgs e)
+        private void btn_buscar_Click(object sender, EventArgs e)
         {
             Buscar_Aporte bus = new Buscar_Aporte();
             bus.ShowDialog();
 
             txtcodA.Text = bus.cod;
+            txtcanA.Text = bus.can;
             cboañoA.Text = bus.año;
             cbomesA.Text = bus.mes;
             cbotipD.Text = bus.tip;
@@ -180,14 +175,38 @@ namespace CCTPPR
             txtsoc.Text = bus.soc;
         }
 
-        private void dgvdatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnsocio_Click(object sender, EventArgs e)
         {
-            txtcodA.Text = dgvdatos.CurrentRow.Cells[0].Value.ToString();
-            cboañoA.Text = dgvdatos.CurrentRow.Cells[1].Value.ToString();
-            cbomesA.Text = dgvdatos.CurrentRow.Cells[2].Value.ToString();
-            cbotipD.Text = dgvdatos.CurrentRow.Cells[3].Value.ToString();
-            txtnroD.Text = dgvdatos.CurrentRow.Cells[4].Value.ToString();
-            txtsoc.Text = dgvdatos.CurrentRow.Cells[5].Value.ToString();
+            BuscarSocios bus = new BuscarSocios();
+            bus.ShowDialog();
+
+            txtsoc.Text = bus.codS;
+            txtdaS.Text = bus.nomS + " " + bus.patS + " " + bus.matS;
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            Verifica_Agregar();
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            Verifica_Actualizar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Verifica_Eliminar();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

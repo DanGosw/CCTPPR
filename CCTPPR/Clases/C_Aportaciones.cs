@@ -14,11 +14,13 @@ namespace CCTPPR.Clases
         Conexion con = new Conexion();
 
         private string cod;
+        private string can;
         private string mes;
         private string año;
         private string tip;
         private string nro;
         public string Cod { get => cod; set => cod = value; }
+        public string Can { get => can; set => can = value; }
         public string Mes { get => mes; set => mes = value; }
         public string Año { get => año; set => año = value; }
         public string Tip { get => tip; set => tip = value; }
@@ -32,14 +34,14 @@ namespace CCTPPR.Clases
                 MySqlCommand cmd = new MySqlCommand();
                 con.conectar();
                 cmd.Connection = con.con;
-                cmd.CommandText = "insert into aportaciones (mes_apor, año_apor, tip_doc, nro_doc, cod_soc) values ('" + mes + "','" + año + "','" + tip + "','" + nro + "', '" + soc + "')";
+                cmd.CommandText = "insert into aportaciones (can_aporte, año_apor,mes_apor , tip_doc, nro_doc, cod_soc) values ('" + can + "','" + año + "','" + mes + "','" + tip + "','" + nro + "', '" + soc + "')";
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
                 cmd.Connection.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error D:");
             }
         }
         public void modificar(string soc)
@@ -48,7 +50,7 @@ namespace CCTPPR.Clases
 
             con.conectar();
             cmd.Connection = con.con;
-            cmd.CommandText = "update aportaciones set mes_apor ='" + mes + "', año_apor ='" + año + "', tip_doc='" + tip + "', nro_doc  = '" + nro + "', cod_soc = '" + soc + "' where cod_apor = '" + cod + "'";
+            cmd.CommandText = "update aportaciones set can_aporte ='" + can + "', año_apor ='" + año + "', mes_apor ='" + mes + "', tip_doc='" + tip + "', nro_doc  = '" + nro + "', cod_soc = '" + soc + "' where cod_apor = '" + cod + "'";
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();

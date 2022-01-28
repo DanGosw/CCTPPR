@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static CCTPPR.Program;
@@ -12,6 +11,15 @@ namespace CCTPPR.Formularios
     {
         private Timer ti;
         MySqlConnection con;
+
+        Clases.AccesoUser ac = new Clases.AccesoUser();
+
+        private void DatosLlenar()
+        {
+            ac.Nom = txtusu.Text;
+            ac.Dia = lblfec.Text;
+            ac.Hor = lblhor.Text;
+        }
 
         public Login()
         {
@@ -26,18 +34,13 @@ namespace CCTPPR.Formularios
             lblhor.Text = xd.ToString("h:mm:ss tt");
             lblfec.Text = xd.ToLongDateString();
         }
-
         double count = 0;
 
         private void Login_Load(object sender, EventArgs e)
         {
-            con = new MySqlConnection("database=CCTPPR;data source=localhost;user id=root;password=dangows");
+            con = new MySqlConnection("database=cctppr; data source=192.168.1.43; user id= DanGosw; pwd=dangosw");
             txtpass.UseSystemPasswordChar = true;
-
-            pbxd.Image = Image.FromFile(@"C:\Users\CAMARA\source\repos\CCTPPR\CCTPPR\Resources\redes-sociales.gif");
-            pbxd.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
         private void chkver_CheckedChanged(object sender, EventArgs e)
         {
             if (txtpass.UseSystemPasswordChar)
@@ -49,7 +52,6 @@ namespace CCTPPR.Formularios
                 txtpass.UseSystemPasswordChar = true;
             }
         }
-
         public void log(string usuario, string contra)
         {
             try
@@ -66,15 +68,17 @@ namespace CCTPPR.Formularios
                 if (leer.Read())
                 {
                     //Globalxd.tipousuario = leer["cargo"].ToString();
-
                     string textoo = txtusu.Text;
                     Formularios.Loader lod = new Formularios.Loader(textoo);
-                    this.Hide();
+                    DatosLlenar();
+                    ac.Grabar();
                     lod.Show();
+
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error de Usuario y/o Contraseñas", "xd");
+                    MessageBox.Show("Error de Usuario y/o Contraseñas", "Error de Acceso");
                     count += 1;
                 }
                 if (count == 3)
@@ -112,6 +116,6 @@ namespace CCTPPR.Formularios
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
             log(this.txtusu.Text, this.txtpass.Text);
-        }
+        }     
     }
 }

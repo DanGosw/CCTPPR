@@ -50,9 +50,8 @@ namespace CCTPPR.Formularios
             this.entrada.ForeColor = System.Drawing.Color.White;
             this.entrada.Location = new System.Drawing.Point(22, 271);
             this.entrada.Name = "entrada";
-            this.entrada.Size = new System.Drawing.Size(74, 25);
+            this.entrada.Size = new System.Drawing.Size(0, 25);
             this.entrada.TabIndex = 0;
-            this.entrada.Text = "Config";
             // 
             // cir
             // 
