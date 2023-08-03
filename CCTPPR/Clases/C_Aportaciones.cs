@@ -30,7 +30,6 @@ namespace CCTPPR.Clases
         {
             try
             {
-
                 MySqlCommand cmd = new MySqlCommand();
                 con.conectar();
                 cmd.Connection = con.con;
@@ -54,7 +53,6 @@ namespace CCTPPR.Clases
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-
         }
         public void eliminar()
         {
@@ -66,8 +64,8 @@ namespace CCTPPR.Clases
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
-
         }
+        
         public DataTable mostrar()
         {
             MySqlCommand cmd = new MySqlCommand();
@@ -79,6 +77,7 @@ namespace CCTPPR.Clases
             da.Fill(dt);
             return dt;
         }
+        
         public DataTable Buscar_Aporte(string ingr)
         {
             MySqlCommand cmd = new MySqlCommand();
