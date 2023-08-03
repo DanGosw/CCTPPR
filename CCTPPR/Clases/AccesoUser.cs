@@ -24,7 +24,6 @@ namespace CCTPPR.Clases
         {
             try
             {
-
                 MySqlCommand cmd = new MySqlCommand();
                 con.conectar();
                 cmd.Connection = con.con;
@@ -38,9 +37,5 @@ namespace CCTPPR.Clases
                 MessageBox.Show(ex.Message, "Error D:");
             }
         }
-
-
     }
-
-
 }
